@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Исходный код</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		function Menu(id){
+			var menu = document.getElementById('menu_' + id).style;
+			if (menu.display == 'none'){
+				menu.display = 'block';
+			} else {
+				menu.display = 'none';
+			}
+		}
+	</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<a href="./index.html"><img src="images/max_logo.png" alt="Место для логотипа"></a>
+	</div>
+
+	<div class="sidebar1">
+		<ul class="nav">
+			<li><a href="index.html">Главная страница</a></li>
+			<li onclick="Menu('1')"><a id="working">Работа № 1</a></li>
+			<ul id="menu_1" style="display:none;">
+				<li><a href="./download/specification_1.pdf" target="_blank">Спецификация</a></li>
+				<li><a href="images/hierarchy_files_1.png" target="_blank">Иерархия файлов</a></li>
+				<li><a href="source_code_1.html">Исходный код</a></li>
+				<li><a href="result_work_1.html">Результаты работы</a></li>
+			</ul>
+			<li onclick="Menu('2')"><a id="working_2">Работа № 2</a></li>
+			<ul id="menu_2" style="display:none;">
+				<li><a href="source_code_2.html">Исходный код</a></li>
+				<li><a href="result_work_2.html">Результаты работы</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<div class="content">
+		<p>Вы можете просмотреть файлы прямо со сайта:<br>
+			<a href="files/ex2/index.txt" target="_blank">index.php</a>
+	</div>
+
+	<div class="footer">
+		<div style="text-align: center;"><p>2015 &copy; vadimushka_d | Вадим Дунькин | гр. 13ОИТ18к</p></div>
+	</div>
+</div>
+</body>
+</html>
